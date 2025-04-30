@@ -34,5 +34,8 @@ jobs:
 
             # Step 4 Run Test 
             - name: Run tests
-              run: pytest  
+              
+              run: |
+                export PYTHONPATH=$PYTHONPATH:$(pwd)/src
+                pytest  
 
